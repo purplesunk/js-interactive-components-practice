@@ -7,4 +7,4 @@
 - Tabs
 - Image Caroussel
 
-Live page:
+Live page: https://purplesunk.github.io/js-interactive-components-practice/
