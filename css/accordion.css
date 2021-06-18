@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-war: hsl(346, 84%, 61%);
+  --bg-hunt: hsl(42, 100%, 70%);
+  --bg-paladin: hsl(164, 95%, 43%);
+  --bg-mage: hsl(195, 83%, 38%);
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+.accordion {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: min(90%, 30em);
+  overflow: hidden;
+}
+
+.info,
+.bar {
+  display: flex;
+  padding: 0.75rem 1.5rem;
+}
+
+.bar {
+  height: 3rem;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.bar > p {
+  display: block;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.info {
+  font-size: 0.9rem;
+  transform: translateY(-11rem);
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+.info > p {
+  line-height: 1.7;
+  width: 100%;
+}
+
+img {
+  max-width: min(80px, 100%);
+  max-height: min(80px, 100%);
+  margin-right: 1.5rem;
+}
+
+.mage,
+.warrior,
+.paladin,
+.hunter {
+  display: flex;
+  height: 3rem;
+  flex-direction: column;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.mage,
+.mage > .info,
+.mage > .bar {
+  background-color: var(--bg-mage);
+}
+
+.warrior,
+.warrior > .info,
+.warrior > .bar {
+  background-color: var(--bg-war);
+}
+
+.hunter,
+.hunter > .info,
+.hunter > .bar {
+  background-color: var(--bg-hunt);
+}
+
+.paladin,
+.paladin > .info,
+.paladin > .bar {
+  background-color: var(--bg-paladin);
+}
+
+.open-section {
+  height: 13rem !important;
+}
+
+.show-info {
+  transform: translateY(0) !important;
+}

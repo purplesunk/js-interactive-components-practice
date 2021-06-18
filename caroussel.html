@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  
+  <script defer src="js/caroussel.js"></script>
+  <script defer src="js/menu.js"></script>
+  <link rel="stylesheet" href="css/caroussel.css" media="all">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet">
+
+  <title>Carousel</title>
+</head>
+<body>
+  
+  <div class="carousel">
+    <button class="left"> 
+      <span class="material-icons-round md-60">arrow_left</span>
+    </button>
+    <div class="photo-container">
+      <div class="photos">
+        <img src="./images/girl-in-blue.jpg" alt="Girl in Coat">
+        <img src="./images/dog.jpg" alt="Dog">
+        <img src="./images/road.jpg" alt="Road">
+      </div>
+    </div>
+    <button class="right">
+      <span class="material-icons-round md-60">arrow_right</span>
+    </button>
+  </div>
+  <div class="indicators">
+   <span class="material-icons-round md-24 selected">circle</span>
+   <span class="material-icons-round md-24">circle</span>
+   <span class="material-icons-round md-24">circle</span>
+  </div>
+  <link rel="stylesheet" href="css/menu.css" media="all">
+  <menu-bar></menu-bar>
+ </body>
+</html>

@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-family: sans-serif;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.tabbed-component {
+  border: 0.3875rem solid #14213d;
+  height: 44.6875rem;
+  position: relative;
+  width: min(90%, 40rem);
+}
+
+.tabs {
+  background-color: #14213d;
+  display: flex;
+}
+
+.tab {
+  background-color: #2D4B8B;
+  color: #C1CFEB;
+  padding: 0.625rem 1.325rem;
+  width: 100%;
+}
+
+.tab + .tab {
+  margin-left: 0.2875rem;
+}
+
+.tab-selected {
+  background-color: #C1CFEB;
+  color: black;
+}
+
+.window-component {
+  background-color: #C1CFEB;
+  height: 41.5rem;
+  padding: 3rem;
+  overflow: auto;
+  position: absolute;
+}
+
+.window-component > img {
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+  width: 70%;
+}
+
+.window-component > h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.visible-window {
+  z-index: 1000;
+}
