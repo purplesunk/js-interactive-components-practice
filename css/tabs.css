@@ -16,8 +16,7 @@ body {
   border: 0.3875rem solid #14213d;
   height: 44.6875rem;
   position: relative;
-  min-width: 34rem;
-  max-width: 40rem
+  width: min(100%, 40rem)
 }
 
 .tabs {
@@ -30,6 +29,8 @@ body {
   color: #C1CFEB;
   padding: 0.625rem 1.325rem;
   width: 100%;
+  overflow: hidden;
+  white-space: nowrap; 
 }
 
 .tab + .tab {
@@ -62,5 +63,5 @@ body {
 }
 
 .visible-window {
-  z-index: 2;
+  z-index: 1;
 }
