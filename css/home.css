@@ -9,6 +9,7 @@ body {
   background-color: #005377;
   color: white;
   font-family: sans-serif;
+  min-height: 100vh;
   overflow: hidden;
   padding: 3rem;
 }

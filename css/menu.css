@@ -5,6 +5,7 @@
 
 body {
   transition: var(--transition);
+  overflow-x: hidden;
 }
 
 .menu-button {
@@ -27,7 +28,6 @@ body {
 }
 
 .menu-button:hover {
-  color: grey;
   cursor: pointer;
 }
 
@@ -40,7 +40,7 @@ body {
   background-color: #373C4A;
   display: flex;
   font-family: sans-serif;
-  min-height: 100vh;
+  height: 100%;
   min-width: var(--width-menu);
   padding: 4ch;
   position: absolute;
