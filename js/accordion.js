@@ -3,16 +3,23 @@ const bars = accordion.querySelectorAll('.bar')
 
 bars.forEach(bar => bar.addEventListener('click', event => {
   const target = event.currentTarget
-  const info = target.nextElementSibling.classList
-  const parent = target.parentElement.classList
+  const info = target.nextElementSibling
+  const parent = target.parentElement
   const icon = target.children[1]
 
-  info.toggle('show-info')
-  parent.toggle('open-section')
+  info.classList.toggle('show-info')
   
-  if (info.contains('show-info')) {
+  const parentHeight = parent.clientHeight
+  const infoHeight = info.clientHeight
+
+  if (info.classList.contains('show-info')) {
     icon.innerText = '-'
+    const newHeight = parentHeight + infoHeight
+    parent.style.height = newHeight / 16 + "rem"
   } else {
     icon.innerText = '+'
+    parent.style.height = "3rem"
   }
+
+
 }))

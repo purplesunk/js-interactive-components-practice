@@ -48,7 +48,7 @@ body {
 .info {
   font-size: 0.9rem;
   transform: translateY(-11rem);
-  transition: transform 0.5s ease;
+  transition: transform 0.7s ease;
   z-index: 0;
 }
 
@@ -71,7 +71,7 @@ img {
   height: 3rem;
   flex-direction: column;
   overflow: hidden;
-  transition: height 0.5s ease;
+  transition: height 0.7s ease;
 }
 
 .mage,
@@ -96,10 +96,6 @@ img {
 .paladin > .info,
 .paladin > .bar {
   background-color: var(--bg-paladin);
-}
-
-.open-section {
-  height: 13rem !important;
 }
 
 .show-info {
