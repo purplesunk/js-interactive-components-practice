@@ -16,14 +16,14 @@
   <title>Modal Window</title>
 </head>
 <body>
-  <button class="click-me">Click Me!</button>
-  <div class="modal-window isHidden">
-    <button class="close">&times;</button>
+  <button data-modal-target="#hello" class="click-me">Click Me!</button>
+  <div class="modal-window" id="hello">
+    <button class="close" data-modal-close="">&times;</button>
     <span class="material-icons-outlined md-60">front_hand</span>
     <p>Hello!</p>
-    <button class="accept">Okay</button>
+    <button class="accept" data-modal-close="">Okay</button>
   </div>
-  <div class="modal-window--background isHidden"></div>
+  <div id="overlay"></div>
   <link rel="stylesheet" href="css/menu.css" media="all">
   <menu-bar></menu-bar>
 </body>

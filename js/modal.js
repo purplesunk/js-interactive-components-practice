@@ -1,23 +1,29 @@
-const clickMe = document.querySelector('.click-me')
-const modalWindow = document .querySelector('.modal-window')
-const modalBackground = document.querySelector('.modal-window--background')
-const close = modalWindow.querySelector('.close')
-const accept = modalWindow.querySelector('.accept')
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-modal-close]')
+const overlay = document.querySelector('#overlay')
 
-clickMe.addEventListener('click', _ => {
-  modalWindow.classList.remove('isHidden')
-  modalBackground.classList.remove('isHidden')
+openModalButtons.forEach(button => {
+  button.addEventListener('click', _ => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
 })
 
-const addIsHidden = _ => {
-  modalWindow.classList.add('isHidden')
-  modalBackground.classList.add('isHidden')
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', _ => {
+    const modal = button.closest('.modal-window')
+    closeModal(modal)
+  })
+})
 
-  const button = event.currentTarget.classList
-  if ( button.contains('accept') ) {
-    console.log( 'thank you' )
-  }
+const openModal = (modal) => {
+  if (modal == null) return 
+  modal.classList.add("active")
+  overlay.classList.add("active")
 }
 
-close.addEventListener('click', addIsHidden)
-accept.addEventListener('click', addIsHidden)
+const closeModal = (modal) => {
+  if (modal == null) return 
+  modal.classList.remove("active")
+  overlay.classList.remove("active")
+}
